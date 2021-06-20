@@ -1,0 +1,17 @@
+{
+  "Student": [
+    {
+      "id": 1,
+      "name": "Bardoli",
+      "add": "Shastri road",
+      "city": "Bardoli",
+      "state": "Gujarate"
+    }
+  ],
+  "User": [
+    {
+     
+    }
+  ]
+  
+}

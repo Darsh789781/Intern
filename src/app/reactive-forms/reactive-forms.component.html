@@ -1,0 +1,54 @@
+<div class="container">
+      <div class="row">
+            <div class="col-md-12">
+                  <form [formGroup]="skillsForm" (ngSubmit) = "onSubmit">
+                        <div class="form-group">
+                              <label>Name</label>
+                              <input type="text" class="form-control" formControlName="name">
+                              <span class="validate" *ngIf="!skillsForm.get('name').valid && skillsForm.get('name').touched " >Enter Valid Name</span>
+                        </div>
+                        &nbsp;
+                        <div class="form-group">
+                              <label>Roll_no</label>
+                              <input type="text" class="form-control"formControlName="roll_no">
+                              <span class="validate" *ngIf="!skillsForm.get('roll_no').valid && skillsForm.get('roll_no').touched  " >Enter Valid No</span>
+
+                        </div>
+                        &nbsp;
+
+                        <div class="form-group">
+                              <label>Address</label>
+                              <input type="text" class="form-control"formControlName="address">
+                              <span class="validate" *ngIf="!skillsForm.get('address').valid && skillsForm.get('address').touched  " >Enter Valid Address</span>
+
+                        </div>
+                        &nbsp;
+                        <div>
+                              <label>Skills</label>
+                        </div>
+                        <div formArrayName="skills"
+                        *ngFor="let item of skillsForm.get('skills')['controls'];  let i = index;">
+                        <div [formGroupName]="i">
+                          <input class="form-control"formControlName="title" placeholder="title">
+                          
+                              <div class="text-danger" *ngIf="skills.controls[i].get('title').errors?.required">Title is required</div>
+                          &nbsp;
+                          
+                        
+                        </div>
+                        <div *ngIf ="skillsForm.get('skills').value.length>1" >
+                              <button class="my-2" (click)="removeForm(i)">Remove</button>
+                                </div>
+                       
+                      </div>
+                      <div>
+                        <button (click)="addForm()"class="my-2">Add More titles</button>
+                      </div>
+                      &nbsp;
+                        <div>
+                              <button type="submit" (click)="onSubmit()"class="btn btn-primary ">Submit</button>
+                        </div>
+                  </form>
+            </div>
+      </div>
+</div>
