@@ -8,7 +8,7 @@ export class SubjectService {
 
   constructor() { }
   public userin  = new BehaviorSubject<User>(null);
-  myUser =this.userin.asObservable()
+  // myUser =this.userin.asObservable()
   
   addUser(user:User){
     this.userin.next(user)

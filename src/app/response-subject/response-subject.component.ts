@@ -16,7 +16,7 @@ export class ResponseSubjectComponent implements OnInit,OnDestroy {
   constructor(private subjectService:SubjectService) { }
 
   ngOnInit(): void {
-  this.subjectService.myUser.subscribe((user)=>{
+  this.subjectService.userin.subscribe((user)=>{
       this.userX = user;
       console.log('aaa',user)
 

@@ -1,11 +1,12 @@
-{{userX}}
+<!-- {{userX}} -->
 <div class="container">
 
       <div class="row">
           <div class="col-md-12">
+              <div *ngIf="userX">
               <h3>Form Submitted</h3>
               <p>Name: {{userX?.name}}</p>
               <p>surname: {{userX?.surname}}</p>
-             
+            </div>
           </div>
       </div>
