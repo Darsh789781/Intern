@@ -34,10 +34,7 @@ export class StudentsComponent implements OnInit {
     this.showupdate=false;
   }
   postStudent(){
-    // this.student.name= this.studentForm.value.name;
-    // this.student.add= this.studentForm.value.add;
-    // this.student.city= this.studentForm.value.city;
-    // this.student.state= this.studentForm.value.state;
+  
     this.student= this.studentForm.value;
 
     this.api.postStudent(this.student).subscribe(res=>{
@@ -72,7 +69,7 @@ export class StudentsComponent implements OnInit {
     this.student.add= this.studentForm.value.add;
     this.student.city= this.studentForm.value.city;
     this.student.state= this.studentForm.value.state;
-    this.api.updateStudent(this.student,this.student.id).subscribe(res=>{
+        this.api.updateStudent(this.student,this.student.id).subscribe(res=>{
       alert('Updated')
       this.getAllStudent();
 
