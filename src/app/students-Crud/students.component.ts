@@ -60,20 +60,25 @@ export class StudentsComponent implements OnInit {
     this.showAdd=false;
     this.showupdate=true;
     this.student.id=row.id
+    //------- used this for the setvalue for all the field this.studentForm.patchValue(row) --------------
+   
+    // ------------- please remove this code -------------------
     // this.studentForm.controls['id'].setValue(student.id);
     this.studentForm.controls['name'].setValue(row.name);
     this.studentForm.controls['add'].setValue(row.add);
     this.studentForm.controls['city'].setValue(row.city);
     this.studentForm.controls['state'].setValue(row.state);
-
+    //-------------------------------------------------------
 
 
   }
   updateStudent(){
+    //----------------------------------------------
     this.student.name= this.studentForm.value.name;
     this.student.add= this.studentForm.value.add;
     this.student.city= this.studentForm.value.city;
     this.student.state= this.studentForm.value.state;
+    //---------------------------
     this.api.updateStudent(this.student,this.student.id).subscribe(res=>{
       alert('Updated')
       this.getAllStudent();
