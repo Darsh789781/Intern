@@ -34,10 +34,11 @@ export class StudentsComponent implements OnInit {
     this.showupdate=false;
   }
   postStudent(){
-    this.student.name= this.studentForm.value.name;
-    this.student.add= this.studentForm.value.add;
-    this.student.city= this.studentForm.value.city;
-    this.student.state= this.studentForm.value.state;
+    // this.student.name= this.studentForm.value.name;
+    // this.student.add= this.studentForm.value.add;
+    // this.student.city= this.studentForm.value.city;
+    // this.student.state= this.studentForm.value.state;
+    this.student= this.studentForm.value;
 
     this.api.postStudent(this.student).subscribe(res=>{
       alert('Student Added')
@@ -60,11 +61,8 @@ export class StudentsComponent implements OnInit {
     this.showAdd=false;
     this.showupdate=true;
     this.student.id=row.id
-    // this.studentForm.controls['id'].setValue(student.id);
-    this.studentForm.controls['name'].setValue(row.name);
-    this.studentForm.controls['add'].setValue(row.add);
-    this.studentForm.controls['city'].setValue(row.city);
-    this.studentForm.controls['state'].setValue(row.state);
+    
+    this.studentForm.patchValue(row)
 
 
 

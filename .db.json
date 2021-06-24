@@ -6,12 +6,16 @@
       "add": "Shastri road",
       "city": "Bardoli",
       "state": "Gujarate"
+    },
+    {
+      "id": 2,
+      "name": "Darshh",
+      "add": "Shastri ro",
+      "city": "Bardoli",
+      "state": "Gujarat"
     }
   ],
   "User": [
-    {
-     
-    }
+    {}
   ]
-  
 }
