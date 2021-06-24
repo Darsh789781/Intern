@@ -11,6 +11,7 @@ import { SubjectComponent } from './subject/subject.component';
 import { ResponseSubjectComponent } from './response-subject/response-subject.component'
 import { SubjectService } from './shared-service/subject.service';
 import { StudentsComponent } from './students-Crud/students.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StudentsComponent } from './students-Crud/students.component';
     ReactiveFormsComponent,
     SubjectComponent,
     ResponseSubjectComponent,
-    StudentsComponent
+    StudentsComponent,
+    MapComponent
    
     
   ],

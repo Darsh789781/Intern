@@ -1,0 +1,28 @@
+<div class="container">
+<!-- <div *ngFor= "let user of users">
+      <p>{{user.username}}</p>
+      <P>{{user.email}}</P>
+</div> -->
+<table class="table mt-3">
+      <thead>
+            <tr>
+           
+            <th>Username</th>
+            <th>Email</th>
+          
+      </tr>
+      </thead>
+      <tbody>
+            <tr *ngFor="let user of users ">
+                 
+                  <td>{{user.username}}</td>
+
+                  <td>{{user.email}}</td>
+
+                  <!-- Created table for storing username and email  -->
+
+                 
+            </tr>
+      </tbody>
+</table>
+</div>
