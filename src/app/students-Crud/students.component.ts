@@ -34,11 +34,13 @@ export class StudentsComponent implements OnInit {
     this.showupdate=false;
   }
   postStudent(){
+  // ------ remove this things -----------
     this.student.name= this.studentForm.value.name;
     this.student.add= this.studentForm.value.add;
     this.student.city= this.studentForm.value.city;
     this.student.state= this.studentForm.value.state;
-
+  //------------------------------
+//  used the this.studentForm.value
     this.api.postStudent(this.student).subscribe(res=>{
       alert('Student Added')
       this.studentForm.reset();
