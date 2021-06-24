@@ -21,12 +21,16 @@ export class MapComponent implements OnInit {
     this.mapService.getUsers().pipe(
       map((res:UserT[])=> 
       res.map(user=>{
+        // console.log(res)
         return{
           username : user.username,
           email:user.email
+         
         }
+        
       }))
     ).subscribe(res=>this.users=res )
+
     /* used map then filtered and manipulalted data ,fetched only username and email from the array of objects*/
   }
   
