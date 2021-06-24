@@ -11,7 +11,7 @@ import { SubjectService } from '../shared-service/subject.service';
   styleUrls: ['./subject.component.scss']
 })
 export class SubjectComponent implements OnInit {
-  @ViewChild('myForm', { static: false }) userForm: NgForm; 
+  @ViewChild('myForm') userForm: NgForm; 
   constructor(private subjectService:SubjectService,private router:Router) { }
 
   ngOnInit(): void {
