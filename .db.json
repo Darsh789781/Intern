@@ -10,9 +10,23 @@
     {
       "id": 2,
       "name": "Darshh",
-      "add": "Shastri ro",
+      "add": "Shastri road",
       "city": "Bardoli",
       "state": "Gujarat"
+    },
+    {
+      "name": "Yash",
+      "add": "Shastri road",
+      "city": "pardi",
+      "state": "Gujarat",
+      "id": 3
+    },
+    {
+      "name": "nikunj",
+      "add": "Shastri road",
+      "city": "valsad",
+      "state": "sss",
+      "id": 4
     }
   ],
   "User": [

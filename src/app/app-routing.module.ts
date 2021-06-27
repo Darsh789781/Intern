@@ -6,6 +6,7 @@ import { MapComponent } from './map/map.component';
 import { ResponseSubjectComponent } from './response-subject/response-subject.component';
 import { StudentsComponent } from './students-Crud/students.component';
 import { SubjectComponent } from './subject/subject.component';
+import { SwitchMapComponent } from './switch-map/switch-map.component';
 
 const routes: Routes = [{
   path:'reactive-forms',component:ReactiveFormsComponent
@@ -21,6 +22,9 @@ const routes: Routes = [{
 },
 {
   path:'map',component:MapComponent
+},
+{
+  path:'switch-map',component:SwitchMapComponent
 }
 ];
 

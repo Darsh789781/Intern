@@ -12,6 +12,7 @@ import { ResponseSubjectComponent } from './response-subject/response-subject.co
 import { SubjectService } from './shared-service/subject.service';
 import { StudentsComponent } from './students-Crud/students.component';
 import { MapComponent } from './map/map.component';
+import { SwitchMapComponent } from './switch-map/switch-map.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MapComponent } from './map/map.component';
     SubjectComponent,
     ResponseSubjectComponent,
     StudentsComponent,
-    MapComponent
+    MapComponent,
+    SwitchMapComponent
    
     
   ],
