@@ -21,7 +21,7 @@ export class MapComponent implements OnInit {
     this.mapService.getUsers().pipe(
       map((res:UserT[])=> 
       res.map(user=>{
-        // console.log(res)
+        console.log(user)
         return{
           username : user.username,
           email:user.email

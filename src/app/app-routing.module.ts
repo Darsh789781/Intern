@@ -25,6 +25,9 @@ const routes: Routes = [{
 },
 {
   path:'switch-map',component:SwitchMapComponent
+},
+{
+  path:'bank',loadChildren:()=>import('./bank/bank.module').then(m=>m.BankModule)
 }
 ];
 

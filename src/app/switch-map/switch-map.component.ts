@@ -31,7 +31,7 @@ results:Student
       debounceTime(500),
       switchMap(res=>this.switchMap.getSearch(res))
       )
-    .subscribe(res=>{//console.log(res)
+    .subscribe(res=>{console.log(res)
               this.results=res})
   }
   //inForm is manipulated by using map change value is grabbed 

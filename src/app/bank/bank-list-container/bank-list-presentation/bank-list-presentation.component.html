@@ -1,0 +1,45 @@
+<div class="container mt-3">
+      <h5 class="text-success">Search</h5>
+      <form #Form="ngForm" >
+      <div>
+            <input type="text"  name="search"class="form-control"  ngModel>
+      </div>
+      </form>
+      <hr>
+<table class="table mt-3">
+      <thead>
+            <tr>
+            <th>id</th>
+            <th>acc_no</th>
+            <th>acc_name</th>
+            <th>phone_no</th>
+            <th>email</th>
+            <th>gender</th>
+            <th>address</th>
+            <th>basic_amount</th>
+            <!-- <th>currency</th> -->
+
+      </tr>
+      </thead>
+      <tbody>
+            <tr *ngFor="let row of results ">
+                  <td>{{row.id}}</td>
+                  <td>{{row.acc_no}}</td>
+
+                  <td>{{row.acc_name}}</td>
+                  <td>{{row.phone_no}}</td>
+                  <td>{{row.email}}</td>
+
+                  <td>{{row.gender}}</td>
+
+                  <td>{{row.address}}</td>
+                  <td>{{row.currency+row.basic_amount}}</td>
+
+
+                  <td><a routerLink="update/{{row.id}}"><i class="fa fa-edit" style="font-size:30px;color:black ; cursor: pointer ;">Edit</i></a>
+                  <button (click)="delete(row)"class="btn btn-danger mx-3">Delete</button></td>
+
+            </tr>
+      </tbody>
+</table>
+</div>

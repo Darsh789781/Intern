@@ -1,0 +1,23 @@
+<div class="container">
+<table class="table mx-3 mt-3">
+      <thead>
+        <tr>
+          <!-- <th scope="col">#</th> -->
+          <th scope="col">Employee-name</th>
+          <th scope="col">Employee-salary</th>
+          <th scope="col">Employee-salary-greater</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let list of allList " >
+          <td>{{list.empname}}</td>
+          <td>{{list.empsalary}}</td>
+          <td>{{list.empgreatersalary}}</td>
+
+        </tr>
+       
+       
+      </tbody>
+    </table>
+</div>

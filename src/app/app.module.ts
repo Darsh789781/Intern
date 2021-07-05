@@ -13,6 +13,9 @@ import { SubjectService } from './shared-service/subject.service';
 import { StudentsComponent } from './students-Crud/students.component';
 import { MapComponent } from './map/map.component';
 import { SwitchMapComponent } from './switch-map/switch-map.component';
+import { MvpComponent } from './mvp/mvp.component';
+import { RxwebValidators } from '@rxweb/reactive-form-validators';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { SwitchMapComponent } from './switch-map/switch-map.component';
     ResponseSubjectComponent,
     StudentsComponent,
     MapComponent,
-    SwitchMapComponent
+    SwitchMapComponent,
+    MvpComponent,
+   
+   
    
     
   ],
@@ -31,7 +37,9 @@ import { SwitchMapComponent } from './switch-map/switch-map.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxMaskModule.forRoot()
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
