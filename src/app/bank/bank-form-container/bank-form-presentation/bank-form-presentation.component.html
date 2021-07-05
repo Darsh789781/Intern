@@ -90,7 +90,9 @@
                   <div class="form-group" >
                         <label for="exampleInputPassword1">Basic Amount</label>
                         <input type="text" [value]="bankForm.get('basic_amount').value" class="form-control" id="exampleInputAddress1" placeholder="Basic Amount" formControlName="basic_amount">
+                       
                       </div>
+                      <div *ngIf="bankForm.controls.basic_amount.errors.pattern">Enter only number.</div>
 
                   <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
                   <!-- <button (click)="editDetails()" class="btn btn-info"type="button"  >Edit</button>

@@ -19,7 +19,7 @@ export class BankFormPresenterService {
         bank:new FormControl(),
         gender:new FormControl(),
         address: new FormControl(),
-        basic_amount:new FormControl('', Validators.required),
+        basic_amount:new FormControl('', [Validators.required,Validators.pattern("^[0-9]*$")]),
         currency:new FormControl()
 
       })
