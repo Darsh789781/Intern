@@ -16,7 +16,9 @@ import { SwitchMapComponent } from './switch-map/switch-map.component';
 import { MvpComponent } from './mvp/mvp.component';
 import { RxwebValidators } from '@rxweb/reactive-form-validators';
 import { NgxMaskModule } from 'ngx-mask';
-
+import { ForkjoinComponent } from './forkjoin/forkjoin.component';
+import { DynamicTemplatingComponent } from './dynamic-templating/dynamic-templating.component';
+import { ElementReferenceComponent } from './element-reference/element-reference.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { NgxMaskModule } from 'ngx-mask';
     MapComponent,
     SwitchMapComponent,
     MvpComponent,
-   
+    ForkjoinComponent,
+    DynamicTemplatingComponent,
+    ElementReferenceComponent,
    
    
     

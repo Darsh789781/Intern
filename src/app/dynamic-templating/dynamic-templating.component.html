@@ -1,0 +1,53 @@
+<p>dynamic-templating works!</p>
+<ng-template #myTemplate let-User="User">
+
+      <ul>
+
+
+          <li>EmployeeName</li>
+          <li>Salary</li>
+
+        
+
+          <div *ngIf = "valid">
+                  <p *ngFor = "let user of User">
+                      <span *ngIf="user.EmployeeSalary>15000 || user.EmployeeSalary==15000"> 
+
+                      <li>{{user.EmployeeName}}</li>
+                       <li>{{user.EmployeeSalary}}</li>  
+                                  
+                      </span>
+              
+                       
+                    </p>
+                 
+           </div>
+     </ul> 
+  </ng-template>
+  
+  
+  
+   <!-- headerSection -->
+  <div class="header">
+      <h4> Header </h4>
+  
+     <div *ngIf= "valid">
+      <div *ngTemplateOutlet = "myTemplate ; context: Employee"></div>
+    </div>
+  </div>
+  
+  <!-- Body Setion -->
+  <div class="body">
+      <h1>Body</h1>
+      <button class="btn btn-primary" (click) = "click()"> Section</button>
+      
+  </div>
+  
+  <!-- Footer Section -->
+  <div class="footer">
+      <h4> footer </h4>
+      <div *ngIf= "valid">
+
+      <ng-container *ngTemplateOutlet = "myTemplate; context: Employee"></ng-container>
+      </div>/
+  </div>

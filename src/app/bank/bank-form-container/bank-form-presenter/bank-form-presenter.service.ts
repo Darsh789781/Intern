@@ -17,6 +17,7 @@ export class BankFormPresenterService {
         email:new FormControl('', [Validators.required,Validators.email]),
         phone_no:new FormControl(''),
         bank:new FormControl(),
+        
         gender:new FormControl(),
         address: new FormControl(),
         basic_amount:new FormControl('', [Validators.required,Validators.pattern("^[0-9]*$")]),
