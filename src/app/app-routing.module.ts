@@ -43,6 +43,12 @@ const routes: Routes = [{
 },
 {
   path:'dynamiccomponent',loadChildren:()=>import('./dynamic-component/dynamic-component.module').then(m=>m.DynamicComponentModule)
+},
+{
+  path:'cdk',loadChildren:()=>import('./cdk/cdk.module').then(m=>m.CdkModule)
+},
+{
+  path:'user',loadChildren:()=>import('./user-management/user-management.module').then(m=>m.UserManagementModule)
 }
 
 ];

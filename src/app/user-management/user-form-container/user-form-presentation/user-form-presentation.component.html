@@ -1,0 +1,61 @@
+<div class="container ">
+      <form class="row" [formGroup]="userDetailForm">
+          
+          <div class="col-md-12">
+              <label for="firstname" class="form-label">First name </label>
+              <input type="text"   formControlName="firstname" id="name">
+              <span class="error" *ngIf="!userDetailForm.controls.firstname.valid && userDetailForm.controls.firstname.touched" 
+              class="text-danger"> Name is required</span>
+         
+          </div>
+          <div>
+              <label for="lastname" class="form-label">lastname </label>
+              <input type="text"   formControlName = "lastname" id="lastname">
+              <span class="error" *ngIf="!userDetailForm.controls.lastname.valid && userDetailForm.controls.lastname.touched" 
+              class="text-danger">Last name is required</span>
+          </div>
+      
+          <div class="col-md-9">
+              <label for="email" class="form-label">Email: </label>
+              <input type="text"   formControlName="email" id="email" >
+              <span class="error" *ngIf="!userDetailForm.controls.email.valid && userDetailForm.controls.email.touched" 
+              class="text-danger"> Email is required</span>
+          </div>
+      
+          <div class="col-md-9">
+              <label for="contact_no" class="form-label">Phone No: </label>
+              <input type="text"  appContact formControlName="contact_no" id="phone">
+              <span class="error" *ngIf="!userDetailForm.controls.contact_no.valid && userDetailForm.controls.contact_no.touched" 
+              class="text-danger"> Phone Number is required</span>
+          </div>
+          <div class="col-md-9">
+            <label for="client_name" class="form-label">Clientname </label>
+            <input type="text"  appPhoneMask formControlName="client_name" id="phone">
+            <span class="error" *ngIf="!userDetailForm.controls.client_name.valid && userDetailForm.controls.client_name.touched" 
+            class="text-danger"> Clientname is required</span>
+        </div>
+      
+          <div class="col-md-9">
+              <label for="office" class="form-label">Office  </label>
+              <select class="form-select" id="bank_name"  formControlName="office" >
+                  <option selected disabled value="">Choose...</option>
+                  <option>1Rivet</option>
+                  <option>Accentutre</option>
+                  <option>TCS</option>
+                  <option>Infosys</option>
+              </select>
+              <span class="error" *ngIf="!userDetailForm.controls.office.valid && userDetailForm.controls.office.touched" 
+              class="text-danger"> Please select the Office </span>
+          </div>
+      
+     
+      
+          
+      
+          
+          
+          <div class="col-9">
+              <button class="btn btn-primary" type="submit"  [disabled]="!userDetailForm.valid" (click)="onSubmit()">Submit form</button>
+          </div>
+      </form>
+  </div>

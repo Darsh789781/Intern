@@ -20,13 +20,6 @@
       "city": "pardi",
       "state": "Gujarat",
       "id": 3
-    },
-    {
-      "name": "nikunj",
-      "add": "Shastri road",
-      "city": "valsad",
-      "state": "sss",
-      "id": 4
     }
   ],
   "User": [
@@ -388,6 +381,57 @@
       "basic_amount": "",
       "currency": null,
       "id": 34
+    },
+    {
+      "acc_no": "",
+      "acc_name": "",
+      "email": "",
+      "phone_no": "",
+      "bank": null,
+      "gender": null,
+      "address": null,
+      "basic_amount": "",
+      "currency": null,
+      "id": 35
+    },
+    {
+      "acc_no": "",
+      "acc_name": "",
+      "email": "",
+      "phone_no": "",
+      "bank": null,
+      "gender": null,
+      "address": null,
+      "basic_amount": "",
+      "currency": null,
+      "id": 36
+    },
+    {
+      "acc_no": "",
+      "acc_name": "",
+      "email": "",
+      "phone_no": "",
+      "bank": null,
+      "gender": null,
+      "address": null,
+      "basic_amount": "",
+      "currency": null,
+      "id": 37
+    },
+    {
+      "acc_no": "",
+      "acc_name": "",
+      "email": "",
+      "phone_no": "",
+      "bank": null,
+      "gender": null,
+      "address": null,
+      "basic_amount": "",
+      "currency": null,
+      "id": 38
     }
+  ],
+  "user":[
+  
   ]
 }

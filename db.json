@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "user": [
+    {
+      "firstname": "kirtan",
+      "lastname": "ddddddddd",
+      "client_name": "hhhhh",
+      "email": "dhruvmodi2101@gmail.com",
+      "contact_no": "7777777777777777",
+      "office": "1Rivet",
+      "id": 1
+    },
+    {
+      "firstname": "kirtan",
+      "lastname": "ddddddddd",
+      "client_name": "hhhhh",
+      "email": "dhruvmodi2101@gmail.com",
+      "contact_no": "7777777777777777",
+      "office": "TCS",
+      "id": 2
+    },
+    {
+      "firstname": "Yashsss",
+      "lastname": "ddddd",
+      "client_name": "rrrr",
+      "email": "dhruvmodi2101@gmail.com",
+      "contact_no": "(333) (333)-3333",
+      "office": "Accentutre",
+      "id": 3
+    },
+    {
+      "firstname": "Yash",
+      "lastname": "ddddd",
+      "client_name": "ddsdd",
+      "email": "dhruvmodi2101@gmail.com",
+      "contact_no": "(666) (666)-6666",
+      "office": "1Rivet",
+      "id": 4
+    },
+    {
+      "firstname": "Yash",
+      "lastname": "ddddd",
+      "client_name": "ddsdd",
+      "email": "dhruvmodi2101@gmail.com",
+      "contact_no": "(666) (666)-6666",
+      "office": "1Rivet",
+      "id": 5
+    }
+  ]
+}

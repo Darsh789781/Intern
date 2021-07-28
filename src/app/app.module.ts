@@ -19,6 +19,7 @@ import { NgxMaskModule } from 'ngx-mask';
 import { ForkjoinComponent } from './forkjoin/forkjoin.component';
 import { DynamicTemplatingComponent } from './dynamic-templating/dynamic-templating.component';
 import { ElementReferenceComponent } from './element-reference/element-reference.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,12 @@ import { ElementReferenceComponent } from './element-reference/element-reference
     ForkjoinComponent,
     DynamicTemplatingComponent,
     ElementReferenceComponent,
+    
+    
+    
+    
+    
+    
    
    
     
@@ -42,7 +49,8 @@ import { ElementReferenceComponent } from './element-reference/element-reference
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    NgxPaginationModule
     
   ],
   providers: [],

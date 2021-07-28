@@ -1,5 +1,6 @@
 import { ComponentPortal, DomPortal, Portal, TemplatePortal } from '@angular/cdk/portal';
 import { AfterViewInit, Component, ElementRef, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { BankFormPresentationComponent } from 'src/app/bank/bank-form-container/bank-form-presentation/bank-form-presentation.component';
 
 @Component({
   selector: 'app-cdk-portal-presentation',
@@ -12,14 +13,15 @@ export class CdkPortalPresentationComponent implements AfterViewInit {
   @ViewChild('domPortalContent') domPortalContent: ElementRef<HTMLElement>;
 
   selectedPortal: Portal<any>;
-  componentPortal: ComponentPortal<ComponentPortalExample>;
+  componentPortal: ComponentPortal<BankFormPresentationComponent>;
   templatePortal: TemplatePortal<any>;
   domPortal: DomPortal<any>;
 
   constructor(private _viewContainerRef: ViewContainerRef) { }
 
   ngAfterViewInit() {
-    this.componentPortal = new ComponentPortal(ComponentPortalExample);
+    this.componentPortal = new ComponentPortal(BankFormPresentationComponent);
+    
     this.templatePortal = new TemplatePortal(
       this.templatePortalContent,
       this._viewContainerRef

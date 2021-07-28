@@ -11,7 +11,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CdkLayoutPresentationComponent } from './cdk-container/cdk-layout-presentation/cdk-layout-presentation.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CdkOverlayPresentationComponent } from './cdk-container/cdk-overlay-presentation/cdk-overlay-presentation.component';
-import { OverlayModule } from '@angular/cdk/overlay';
+import { FullscreenOverlayContainer, OverlayContainer, OverlayModule } from '@angular/cdk/overlay';
 import { CdkPortalPresentationComponent } from './cdk-container/cdk-portal-presentation/cdk-portal-presentation.component';
 import { Portal, PortalModule } from '@angular/cdk/portal';
 
@@ -36,6 +36,6 @@ import { Portal, PortalModule } from '@angular/cdk/portal';
     PortalModule
     
     
-  ]
+  ], providers: [{provide: OverlayContainer, useClass: FullscreenOverlayContainer}]
 })
 export class CdkModule { }

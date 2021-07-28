@@ -1,0 +1,63 @@
+
+<div style="float:right "     >
+      <button class="btn btn-primary  "  (click)="openComponent()" >Add form</button>
+    </div>
+    <div style="float:right " ><th (click)="sort('client_name')"><i class="fa fa-sort"></i></th>
+    </div>
+
+<form #Form="ngForm" >
+      <div>
+            <input type="text"  name="search"  class="form-control" [(ngModel)]="searchText" placeholder="Searching name">
+      </div>
+      </form>
+<table class="table table-bordered" class="table" 
+    >
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+           
+            <th scope="col">Clientname</th>
+            <th scope="col">Office</th>
+            <th scope="col">ContactNo</th>
+
+        </tr>
+    </thead>
+    <tbody > 
+        <tr *ngFor="let userdetail of userdetailList | orderBy: key:reverse | paginate: {itemsPerPage:5,currentPage:p}; ; let i=index">
+            <td> {{userdetail.id}} </td>
+            <td> {{userdetail.firstname}} </td>
+            <td> {{userdetail.lastname}} </td>
+            <td> {{userdetail.email}} </td>
+            <td> {{userdetail.client_name}} </td>
+            <td> {{userdetail.office}} </td>
+            <td> {{userdetail.contact_no}} </td>
+            <td><button (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+                  <i class="fa fa-ellipsis-v"></i>
+                </button> <ng-template
+                  cdkConnectedOverlay
+                  [cdkConnectedOverlayOrigin]="trigger"
+                  [cdkConnectedOverlayOpen]="isOpen"
+                >
+                  <ul class="example-list">
+                    <li  > <a class="nav-link" routerLink='/user/edit/{{userdetail.id}}'routerLinkActive='active' >Edit</a></li>
+                    <li><button class="btn btn-outline-danger m-1" data-toggle="tooltip" data-placement="right" title="Delete" 
+                        (click)="userdetail(userdetail.id)" >
+                         Delete
+                       </button></li>
+                       <!-- This feature has a bug it will appear edit and delete option after two times  reloading of browser -->
+      
+                  </ul>
+                </ng-template>
+            </td>
+            
+        </tr>
+    </tbody>
+    <pagination-controls (pagechange) ="p = $event"></pagination-controls>
+  </table>
+  <!-- <div>
+        <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+  </div> -->
+  

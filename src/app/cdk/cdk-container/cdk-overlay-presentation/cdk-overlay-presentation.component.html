@@ -1,3 +1,15 @@
+<div style="margin-bottom: 3em;"     >
+  <button class="btn btn-secondary" (click)="openComponent()" >Add form</button>
+</div>
+
+<!-- <div>
+  <ng-container #container>
+
+  </ng-container>
+  <ng-container cdkPortalOutlet>
+
+  </ng-container>
+</div> -->
 <button (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
       {{isOpen ? "Close" : "Open"}}
     </button>
@@ -9,7 +21,7 @@
       [cdkConnectedOverlayOpen]="isOpen"
     >
       <ul class="example-list">
-        <li>Item 1</li>
+        <li >Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
       </ul>
